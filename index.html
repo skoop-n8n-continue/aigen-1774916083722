@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Hotel In-Room Display</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=lux843">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-bar">
+            <div class="logo">THE GRAND AURA</div>
+            <div class="header-center">
+                <span id="current-date">Monday, October 24</span>
+            </div>
+            <div class="header-right">
+                <span id="current-time">14:30</span>
+                <span class="room-num">Room 402</span>
+            </div>
+        </header>
+
+        <!-- Main Grid -->
+        <main class="dashboard">
+            <!-- Left Column -->
+            <div class="col left-col">
+                <!-- Weather Widget -->
+                <section class="widget weather-widget">
+                    <h2>Local Weather</h2>
+                    <div class="current-weather">
+                        <div class="weather-icon">
+                            <!-- SVG for sun/cloud -->
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 17.657l-1.414 1.414m12.728 0l-1.414-1.414M7.05 6.343L5.636 4.929M12 8a4 4 0 100 8 4 4 0 000-8z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </div>
+                        <div class="temp">72&deg;</div>
+                        <div class="condition">Sunny & Clear</div>
+                    </div>
+                    <div class="forecast">
+                        <div class="day"><span>Tue</span><span>75&deg;</span></div>
+                        <div class="day"><span>Wed</span><span>71&deg;</span></div>
+                        <div class="day"><span>Thu</span><span>68&deg;</span></div>
+                    </div>
+                </section>
+
+                <!-- TV Guide Widget -->
+                <section class="widget tv-widget">
+                    <h2>TV Guide &middot; Now Playing</h2>
+                    <div class="scroll-container" id="tv-scroll">
+                        <div class="scroll-content">
+                            <!-- Items populated by JS -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Center Column -->
+            <div class="col center-col">
+                <!-- Welcome Hero -->
+                <section class="widget welcome-hero" id="welcome-hero">
+                    <div class="hero-overlay"></div>
+                    <div class="welcome-content">
+                        <h3>Welcome to The Grand Aura</h3>
+                        <h1>Good Evening,<br>Mr. Raul Jung</h1>
+                        <p>We are delighted to have you as our guest. If you need anything, press the concierge button on your remote.</p>
+                    </div>
+                </section>
+
+                <!-- Room Service CTA -->
+                <section class="widget room-service-widget">
+                    <div class="rs-image"></div>
+                    <div class="rs-content">
+                        <h2>In-Room Dining</h2>
+                        <p>Experience our new Michelin-starred late night menu, curated by Chef Dubois.</p>
+                        <div class="cta-box">
+                            <div class="qr-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3h6m-3-3v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <span>Scan to order<br>or press 'Dining'</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="col right-col">
+                <!-- Restaurants Widget -->
+                <section class="widget list-widget">
+                    <h2>Dining Nearby</h2>
+                    <div class="scroll-container" id="restaurants-scroll">
+                        <div class="scroll-content">
+                            <!-- Items populated by JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Attractions Widget -->
+                <section class="widget list-widget">
+                    <h2>Local Experiences</h2>
+                    <div class="scroll-container" id="attractions-scroll">
+                        <div class="scroll-content">
+                            <!-- Items populated by JS -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js?v=lux843"></script>
+</body>
+</html>
