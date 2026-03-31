@@ -9,19 +9,19 @@
     <meta http-equiv="Expires" content="0">
     <title>Hotel In-Room Display</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=redbg55">
+    <link rel="stylesheet" href="styles.css?v=conf1">
 </head>
 <body>
-    <div class="app-container">
+    <div class="app-container" id="app-container">
         <!-- Header -->
         <header class="top-bar">
-            <div class="logo">THE GRAND AURA</div>
+            <div class="logo" id="hotel-name">THE GRAND AURA</div>
             <div class="header-center">
                 <span id="current-date">Monday, October 24</span>
             </div>
             <div class="header-right">
                 <span id="current-time">14:30</span>
-                <span class="room-num">Room 402</span>
+                <span class="room-num" id="room-number">Room 402</span>
             </div>
         </header>
 
@@ -31,7 +31,7 @@
             <div class="col left-col">
                 <!-- Weather Widget -->
                 <section class="widget weather-widget">
-                    <h2>Local Weather</h2>
+                    <h2 id="weather-title">Local Weather</h2>
                     <div class="current-weather">
                         <div class="weather-icon">
                             <!-- SVG for sun/cloud -->
@@ -49,7 +49,7 @@
 
                 <!-- TV Guide Widget -->
                 <section class="widget tv-widget">
-                    <h2>TV Guide &middot; Now Playing</h2>
+                    <h2 id="tv-title">TV Guide &middot; Now Playing</h2>
                     <div class="scroll-container" id="tv-scroll">
                         <div class="scroll-content">
                             <!-- Items populated by JS -->
@@ -64,23 +64,23 @@
                 <section class="widget welcome-hero" id="welcome-hero">
                     <div class="hero-overlay"></div>
                     <div class="welcome-content">
-                        <h3>Welcome to The Grand Aura</h3>
-                        <h1>Good Evening,<br>Mr. Raul Jung</h1>
-                        <p>We are delighted to have you as our guest. If you need anything, press the concierge button on your remote.</p>
+                        <h3 id="welcome-subheading">Welcome to The Grand Aura</h3>
+                        <h1 id="welcome-guest-name">Good Evening,<br>Mr. Raul Jung</h1>
+                        <p id="welcome-message">We are delighted to have you as our guest. If you need anything, press the concierge button on your remote.</p>
                     </div>
                 </section>
 
                 <!-- Room Service CTA -->
                 <section class="widget room-service-widget">
-                    <div class="rs-image"></div>
+                    <div class="rs-image" id="rs-image"></div>
                     <div class="rs-content">
-                        <h2>In-Room Dining</h2>
-                        <p>Experience our new Michelin-starred late night menu, curated by Chef Dubois.</p>
+                        <h2 id="rs-title">In-Room Dining</h2>
+                        <p id="rs-desc">Experience our new Michelin-starred late night menu, curated by Chef Dubois.</p>
                         <div class="cta-box">
                             <div class="qr-placeholder">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h6v6H4zm10 0h6v6h-6zM4 14h6v6H4zm10 3h6m-3-3v6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </div>
-                            <span>Scan to order<br>or press 'Dining'</span>
+                            <span id="rs-cta">Scan to order<br>or press 'Dining'</span>
                         </div>
                     </div>
                 </section>
@@ -90,7 +90,7 @@
             <div class="col right-col">
                 <!-- Restaurants Widget -->
                 <section class="widget list-widget">
-                    <h2>Dining Nearby</h2>
+                    <h2 id="dining-title">Dining Nearby</h2>
                     <div class="scroll-container" id="restaurants-scroll">
                         <div class="scroll-content">
                             <!-- Items populated by JS -->
@@ -100,7 +100,7 @@
 
                 <!-- Attractions Widget -->
                 <section class="widget list-widget">
-                    <h2>Local Experiences</h2>
+                    <h2 id="attractions-title">Local Experiences</h2>
                     <div class="scroll-container" id="attractions-scroll">
                         <div class="scroll-content">
                             <!-- Items populated by JS -->
@@ -110,7 +110,7 @@
             </div>
         </main>
     </div>
-    <script src="script.js?v=redbg55"></script>
+    <script src="script.js?v=conf1"></script>
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function () {

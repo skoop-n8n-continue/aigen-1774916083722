@@ -1,12 +1,5 @@
 :root {
-    --bg-dark: #070709;
-    --panel-bg: rgba(255, 255, 255, 0.03);
-    --panel-border: rgba(255, 255, 255, 0.08);
-    --text-main: #fcfcfc;
-    --text-muted: #a0a0a5;
-    --accent-gold: #d4af37;
-    --accent-gold-dim: rgba(212, 175, 55, 0.3);
-
+    /* No default values for data-driven properties */
     --font-heading: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
 }
@@ -17,8 +10,17 @@
     padding: 0;
 }
 
+#app-container {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#app-container.loaded {
+    opacity: 1;
+}
+
 body {
-    background-color: red;
+    background-color: var(--background-color);
     color: var(--text-main);
     font-family: var(--font-body);
     width: 100vw;
@@ -203,7 +205,7 @@ body {
 }
 .tv-item.active {
     border-left-color: var(--accent-gold);
-    background: rgba(212, 175, 55, 0.05);
+    background: var(--accent-gold-dim);
 }
 .tv-time {
     font-size: 0.8rem;
@@ -229,7 +231,6 @@ body {
     justify-content: flex-end;
     background-size: cover;
     background-position: center;
-    background-image: url('https://images.unsplash.com/photo-1542314831-c6a4d14d8387?auto=format&fit=crop&q=80&w=1920');
     border: none;
     box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
     transition: background-image 2s ease-in-out;
@@ -264,6 +265,7 @@ body {
     color: var(--text-muted);
     max-width: 80%;
     line-height: 1.6;
+    white-space: pre-wrap;
 }
 
 /* Room Service CTA */
@@ -275,7 +277,6 @@ body {
 }
 .rs-image {
     width: 40%;
-    background-image: url('https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?auto=format&fit=crop&q=80&w=800');
     background-size: cover;
     background-position: center;
 }
@@ -294,6 +295,7 @@ body {
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
+    white-space: pre-wrap;
 }
 .cta-box {
     display: flex;
@@ -323,6 +325,7 @@ body {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    white-space: pre-wrap;
 }
 
 /* List Items (Restaurants & Attractions) */
